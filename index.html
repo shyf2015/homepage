@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人网页</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav id="nav">
+		<a id="home" href="javascript:void(0);">我的主页</a>
+		<a id="infor" href="javascript:void(0);">个人中心</a>
+		<a href="javascript:void(0);">一键换妆
+			<div id="huazhuang">
+				<ul id="ul">
+					<li imgsrc='img/0.jpg'></li>
+					<li imgsrc='img/1.jpg'></li>
+					<li imgsrc='img/2.jpg'></li>
+					<li imgsrc='img/3.jpg'></li>
+					<li imgsrc='img/4.jpg'></li>
+					<li imgsrc='img/5.jpg'></li>
+					<li imgsrc='img/6.jpg'></li>
+					<li imgsrc='img/7.jpg'></li>
+					<li imgsrc='img/8.jpg'></li>
+					<li imgsrc='img/9.jpg'></li>
+					<li imgsrc='img/10.jpg'></li>
+					<li imgsrc='img/11.jpg'></li>
+					<li imgsrc='img/12.jpg'></li>
+					<li imgsrc='img/13.jpg'></li>
+					<li imgsrc='img/14.jpg'></li>
+				</ul>
+			</div>
+		</a>
+	</nav>
+
+	<audio id="audio" src="gg.mp3" loop="loop"></audio>
+	<div id="menu">
+		<a href="javascript:void(0);">相册</a>
+		<a href="javascript:void(0);">音乐</a>
+		<a href="javascript:void(0);">视频</a>
+	</div>
+	<iframe src="homepage.html" frameborder="1" scrolling="no"></iframe>
+	<div id="music"><img id="music1" src="img/yl.png"><img id="music2" src="img/yl2.png"></div>
+	<div id="bgi">
+		<img id="bgimg" src="05.jpg">
+	</div>
+</body>
+<script>
+var audio=document.getElementById('audio');
+audio.play();
+var music2=document.getElementById('music2');
+var music1=document.getElementById('music1');
+var infor=document.getElementById('infor');
+var home=document.getElementById('home');
+var bgimg=document.getElementById('bgimg');
+var li=document.getElementsByTagName('li');
+var iframe=document.getElementsByTagName('iframe');
+ 	music2.onclick=function(){
+ 		music2.style.display='none';
+ 		music1.style.display='block';
+ 		audio.pause();
+ 	}
+ 	music1.onclick=function(){
+ 		music1.style.display='none';
+ 		music2.style.display='block';	
+ 		audio.play();
+ 	}
+ 	infor.onclick=function(){
+ 		iframe[0].src="information.html";
+ 	}
+ 	home.onclick=function(){
+ 		iframe[0].src="homepage.html";
+ 	}
+ 	for(var i=0;i<li.length;i++){
+ 		li[i].setAttribute("imgsrc","img/"+i+".jpg");
+ 	}
+ 	li[0].onclick=function(){bgimg.src=li[0].getAttribute("imgsrc");}
+ 	li[1].onclick=function(){bgimg.src=li[1].getAttribute("imgsrc");}
+ 	li[2].onclick=function(){bgimg.src=li[2].getAttribute("imgsrc");}
+ 	li[3].onclick=function(){bgimg.src=li[3].getAttribute("imgsrc");}
+ 	li[4].onclick=function(){bgimg.src=li[4].getAttribute("imgsrc");}
+ 	li[5].onclick=function(){bgimg.src=li[5].getAttribute("imgsrc");}
+ 	li[6].onclick=function(){bgimg.src=li[6].getAttribute("imgsrc");}
+ 	li[7].onclick=function(){bgimg.src=li[7].getAttribute("imgsrc");}
+ 	li[8].onclick=function(){bgimg.src=li[8].getAttribute("imgsrc");}
+ 	li[9].onclick=function(){bgimg.src=li[9].getAttribute("imgsrc");}
+ 	li[10].onclick=function(){bgimg.src=li[10].getAttribute("imgsrc");}
+ 	li[11].onclick=function(){bgimg.src=li[11].getAttribute("imgsrc");}
+ 	li[12].onclick=function(){bgimg.src=li[12].getAttribute("imgsrc");}
+ 	li[13].onclick=function(){bgimg.src=li[13].getAttribute("imgsrc");}
+ 	li[14].onclick=function(){bgimg.src=li[14].getAttribute("imgsrc");}
+</script>
+</html>
